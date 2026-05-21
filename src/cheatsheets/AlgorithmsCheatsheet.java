@@ -19,6 +19,7 @@ public class AlgorithmsCheatsheet {
      */
 
     public static int sumList(List<Integer> numbers) {
+        // Suma to dodanie wszystkich elementow do jednego wyniku.
         int sum = 0;
         for (int number : numbers) {
             sum += number;
@@ -27,6 +28,7 @@ public class AlgorithmsCheatsheet {
     }
 
     public static int sumMapValues(Map<String, Integer> map) {
+        // values() zwraca same wartosci z mapy, bez kluczy.
         int sum = 0;
         for (int value : map.values()) {
             sum += value;
@@ -35,6 +37,7 @@ public class AlgorithmsCheatsheet {
     }
 
     public static String findMaxKey(Map<String, Integer> map) {
+        // Maksimum to najwieksza znaleziona wartosc podczas przejscia po danych.
         String bestKey = null;
         int biggest = -1;
 
@@ -50,6 +53,7 @@ public class AlgorithmsCheatsheet {
     }
 
     public static List<String> findTwoBiggest(List<String> names, Map<String, Integer> points) {
+        // Tu szukasz dwoch najlepszych wynikow: pierwszego i drugiego miejsca.
         String first = null;
         String second = null;
 
@@ -78,6 +82,7 @@ public class AlgorithmsCheatsheet {
     }
 
     public static List<Integer> filterGreaterThan(List<Integer> numbers, int threshold) {
+        // Filtrowanie oznacza zostawienie tylko elementow spelniajacych warunek.
         List<Integer> result = new ArrayList<>();
 
         for (int number : numbers) {
@@ -95,6 +100,7 @@ public class AlgorithmsCheatsheet {
     }
 
     public static double percentage(int part, int whole) {
+        // Procent pokazuje, jaka czesc calosci stanowi dany fragment.
         if (whole == 0) {
             return 0;
         }
@@ -102,6 +108,7 @@ public class AlgorithmsCheatsheet {
     }
 
     public static boolean existsMoreThan50Percent(List<String> names, Map<String, Integer> points) {
+        // To jest typowy wzor na sprawdzenie, czy ktos ma bezwzgledna wiekszosc.
         int sum = 0;
         for (int value : points.values()) {
             sum += value;

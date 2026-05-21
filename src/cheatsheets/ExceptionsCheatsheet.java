@@ -24,6 +24,7 @@ public class ExceptionsCheatsheet {
      */
 
     public static void basicTryCatch() {
+        // try to blok z kodem ryzykownym, a catch obsluguje blad, jesli wystapi.
         try {
             BufferedReader br = new BufferedReader(new FileReader("plik.txt"));
             br.close();
@@ -34,6 +35,7 @@ public class ExceptionsCheatsheet {
     }
 
     public static void tryWithResources() {
+        // try-with-resources sam zamyka zasob, np. plik, po zakonczeniu bloku.
         // Najwygodniejszy wzor do pracy z plikami
         try (BufferedReader br = new BufferedReader(new FileReader("plik.txt"))) {
             String line = br.readLine();
@@ -59,7 +61,7 @@ public class ExceptionsCheatsheet {
 
     public static void throwsExample() throws IOException {
         // throws w sygnaturze oznacza:
-        // "ta metoda moze rzucic wyjatek dalej"
+        // "ta metoda moze rzucic wyjatek dalej", czyli nie obsluguje go tutaj.
         BufferedReader br = new BufferedReader(new FileReader("plik.txt"));
         br.close();
     }
@@ -74,6 +76,7 @@ public class ExceptionsCheatsheet {
 }
 
 class MyCustomException extends RuntimeException {
+    // Wlasny wyjatek pozwala nazwac konkretny problem biznesowy w kodzie.
     public MyCustomException() {
         super("Moj wlasny wyjatek");
     }

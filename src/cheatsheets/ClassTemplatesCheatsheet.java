@@ -22,6 +22,7 @@ public class ClassTemplatesCheatsheet {
 }
 
 // 1. REKORD
+// Record to krotki zapis klasy, ktora glownie przechowuje dane.
 record PersonRecord(String name) {
 }
 
@@ -39,6 +40,7 @@ class SimpleBox {
 }
 
 // 3. KLASA Z LISTA
+// Pole typu lista pozwala obiektowi przechowywac wiele elementow naraz.
 class TeamTemplate {
     private List<String> members = new ArrayList<>();
 
@@ -52,6 +54,7 @@ class TeamTemplate {
 }
 
 // 4. METODA STATYCZNA
+// Metoda statyczna nalezy do klasy, a nie do konkretnego obiektu.
 class ParseTemplate {
     public static int fromText(String text) {
         return Integer.parseInt(text);
@@ -59,6 +62,7 @@ class ParseTemplate {
 }
 
 // 5. PRZECIAZENIE METOD
+// Przeciazenie to kilka metod o tej samej nazwie, ale innych parametrach.
 class SummaryTemplate {
     public void summarize() {
         System.out.println("Wersja bez argumentu");
@@ -70,6 +74,7 @@ class SummaryTemplate {
 }
 
 // 6. NADPISANIE toString()
+// toString sluzy do czytelnego zamieniania obiektu na tekst.
 class ProductTemplate {
     private String name;
     private int amount;
@@ -86,6 +91,7 @@ class ProductTemplate {
 }
 
 // 7. SZABLON KLASY PODOBNEJ DO TYCH Z PROJEKTU
+// To wzor klasy, ktora trzyma dane i ma metode fabrykujaca przykladowy obiekt.
 class VoteTemplate {
     private List<String> location = new ArrayList<>();
 

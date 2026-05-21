@@ -35,6 +35,7 @@ public class DataStructuresCheatsheet {
      */
 
     public static void listBasics() {
+        // Lista to uporzadkowana kolekcja elementow dostepnych po indeksie.
         // Tworzenie pustej listy
         List<String> names = new ArrayList<>();
 
@@ -63,11 +64,13 @@ public class DataStructuresCheatsheet {
         names.add("Jan");
         names.add("Ola");
 
+        // Petla for-each sluzy do przejscia po wszystkich elementach kolekcji.
         // Najwygodniejsza petla do przejscia po wszystkich elementach
         for (String name : names) {
             System.out.println(name);
         }
 
+        // Petla z indeksem jest przydatna, gdy liczy sie polozenie elementu.
         // Petla z indeksem, gdy indeks tez ma znaczenie
         for (int i = 0; i < names.size(); i++) {
             System.out.println("Indeks " + i + ": " + names.get(i));
@@ -79,6 +82,7 @@ public class DataStructuresCheatsheet {
         original.add("A");
         original.add("B");
 
+        // Kopia listy daje nowa kolekcje, zeby nie pracowac na tym samym obiekcie listy.
         // Nowa lista, ale te same elementy
         List<String> copy = new ArrayList<>(original);
 
@@ -99,6 +103,7 @@ public class DataStructuresCheatsheet {
     }
 
     public static void mapBasics() {
+        // Mapa przechowuje dane jako pary klucz -> wartosc.
         // Tworzenie pustej mapy
         Map<String, Integer> points = new HashMap<>();
 
@@ -127,6 +132,7 @@ public class DataStructuresCheatsheet {
         points.put("Anna", 20);
         points.put("Ola", 15);
 
+        // keySet() daje zbior kluczy, po ktorych mozna iterowac.
         // keySet() zwraca wszystkie klucze
         for (String name : points.keySet()) {
             System.out.println(name + " -> " + points.get(name));
@@ -139,6 +145,7 @@ public class DataStructuresCheatsheet {
         points.put("Anna", 20);
         points.put("Ola", 15);
 
+        // values() sluzy, gdy interesuja Cie same wartosci, np. do sumowania.
         // values() zwraca wszystkie wartosci
         int sum = 0;
         for (int value : points.values()) {
@@ -154,6 +161,7 @@ public class DataStructuresCheatsheet {
         points.put("Anna", 20);
         points.put("Ola", 15);
 
+        // entrySet() jest wygodne, bo masz od razu klucz i wartosc w jednym miejscu.
         // entrySet() daje od razu klucz i wartosc razem
         for (Map.Entry<String, Integer> entry : points.entrySet()) {
             System.out.println(entry.getKey() + " ma " + entry.getValue());
@@ -196,6 +204,7 @@ public class DataStructuresCheatsheet {
         points.put("Anna", 20);
         points.put("Ola", 15);
 
+        // To klasyczny wzor na wyszukanie najlepszego elementu w jednej petli.
         String bestName = null;
         int biggest = -1;
 

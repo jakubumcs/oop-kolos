@@ -17,6 +17,7 @@ public class StringCheatsheet {
      */
 
     public static void splitExample() {
+        // split dzieli jeden tekst na czesci wedlug separatora.
         String line = "Ala,ma,kota";
         String[] values = line.split(",");
 
@@ -29,6 +30,7 @@ public class StringCheatsheet {
         String a = "test";
         String b = "test";
 
+        // equals porownuje zawartosc tekstu, a nie to, czy to ten sam obiekt.
         // Do porownywania tekstu uzywaj equals, nie ==
         if (a.equals(b)) {
             System.out.println("Napisy sa rowne");
@@ -36,6 +38,7 @@ public class StringCheatsheet {
     }
 
     public static void containsExample() {
+        // contains sprawdza, czy w tekscie wystepuje podany fragment.
         String text = "Andrzej Sebastian DUDA";
 
         if (text.contains("DUDA")) {
@@ -44,6 +47,7 @@ public class StringCheatsheet {
     }
 
     public static void trimExample() {
+        // trim usuwa biale znaki z poczatku i konca napisu.
         String text = "   kot   ";
         String cleaned = text.trim();
 
@@ -51,6 +55,7 @@ public class StringCheatsheet {
     }
 
     public static void parseIntExample() {
+        // parseInt zamienia tekst wygladajacy jak liczba na typ int.
         String text = "123";
         int number = Integer.parseInt(text);
 
@@ -58,6 +63,7 @@ public class StringCheatsheet {
     }
 
     public static void toStringBuildingExample() {
+        // Laczenie napisow pozwala zbudowac dluzszy tekst krok po kroku.
         String result = "";
 
         result += "Linia 1\n";
@@ -68,6 +74,7 @@ public class StringCheatsheet {
     }
 
     public static void formatExample() {
+        // Taki zapis sluzy do skladania czytelnego komunikatu z kilku danych.
         String name = "Jan Kowalski";
         double percentage = 54.3;
 
