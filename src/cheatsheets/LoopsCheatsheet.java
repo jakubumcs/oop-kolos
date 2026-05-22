@@ -8,6 +8,9 @@ public class LoopsCheatsheet {
     /*
      * SCIAGAWKA: PETLE
      *
+     * Petla sluzy do wielokrotnego wykonania tego samego kodu.
+     * Zamiast pisac ten sam kod wiele razy, uzywasz petli.
+     *
      * Najczestsze rodzaje petli:
      * - for
      * - while
@@ -21,7 +24,7 @@ public class LoopsCheatsheet {
     public static void forLoopExample() {
         // Klasyczna petla for jest dobra, gdy wiesz ile razy wykonac kod.
         for (int i = 0; i < 5; i++) {
-            System.out.println("i = " + i);
+            System.out.println("i = " + i); // i = 0, potem 1, 2, 3, 4
         }
     }
 
@@ -30,7 +33,7 @@ public class LoopsCheatsheet {
         int counter = 0;
 
         while (counter < 5) {
-            System.out.println("counter = " + counter);
+            System.out.println("counter = " + counter); // counter = 0, potem 1, 2, 3, 4
             counter++;
         }
     }
@@ -40,7 +43,7 @@ public class LoopsCheatsheet {
         int number = 0;
 
         do {
-            System.out.println("number = " + number);
+            System.out.println("number = " + number); // number = 0, potem 1, potem 2
             number++;
         } while (number < 3);
     }
@@ -53,7 +56,7 @@ public class LoopsCheatsheet {
 
         // for-each jest najwygodniejszy do przejscia po wszystkich elementach kolekcji.
         for (String name : names) {
-            System.out.println(name);
+            System.out.println(name); // Anna, potem Jan, potem Ola
         }
     }
 
@@ -65,7 +68,7 @@ public class LoopsCheatsheet {
 
         // Petla z indeksem przydaje sie, gdy potrzebujesz pozycji elementu.
         for (int i = 0; i < names.size(); i++) {
-            System.out.println("Indeks " + i + ": " + names.get(i));
+            System.out.println("Indeks " + i + ": " + names.get(i)); // Indeks 0: Anna itd.
         }
     }
 
@@ -74,7 +77,7 @@ public class LoopsCheatsheet {
             if (i == 4) {
                 break;
             }
-            System.out.println(i);
+            System.out.println(i); // 0, 1, 2, 3
         }
     }
 
@@ -83,7 +86,7 @@ public class LoopsCheatsheet {
             if (i == 3) {
                 continue;
             }
-            System.out.println(i);
+            System.out.println(i); // 0, 1, 2, 4, 5
         }
     }
 
@@ -94,7 +97,7 @@ public class LoopsCheatsheet {
             sum += i;
         }
 
-        System.out.println("Suma: " + sum);
+        System.out.println("Suma: " + sum); // Suma: 15
     }
 
     public static void countEvenNumbers() {
@@ -106,14 +109,14 @@ public class LoopsCheatsheet {
             }
         }
 
-        System.out.println("Liczby parzyste: " + evenCount);
+        System.out.println("Liczby parzyste: " + evenCount); // Liczby parzyste: 5
     }
 
     public static void nestedLoopsExample() {
         // Zagniezdzone petle sa przydatne np. do tabel, plansz i porownywania kazdego z kazdym.
         for (int row = 0; row < 3; row++) {
             for (int column = 0; column < 3; column++) {
-                System.out.println("Pole: " + row + ", " + column);
+                System.out.println("Pole: " + row + ", " + column); // np. Pole: 0, 0
             }
         }
     }

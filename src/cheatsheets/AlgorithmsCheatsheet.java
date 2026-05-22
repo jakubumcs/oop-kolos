@@ -9,6 +9,9 @@ public class AlgorithmsCheatsheet {
     /*
      * SCIAGAWKA: ALGORYTMICZNE WZORY
      *
+     * Algorytm to sposob rozwiazania zadania krok po kroku.
+     * Te metody pokazuja najczestsze schematy, ktore wracaja w zadaniach.
+     *
      * To sa najczestsze schematy zadan:
      * - suma
      * - maksimum
@@ -24,6 +27,7 @@ public class AlgorithmsCheatsheet {
         for (int number : numbers) {
             sum += number;
         }
+        // Dla listy [2, 4, 6] wynik to 12
         return sum;
     }
 
@@ -33,6 +37,7 @@ public class AlgorithmsCheatsheet {
         for (int value : map.values()) {
             sum += value;
         }
+        // Dla mapy {A=2, B=3} wynik to 5
         return sum;
     }
 
@@ -49,6 +54,7 @@ public class AlgorithmsCheatsheet {
             }
         }
 
+        // Dla mapy {Jan=10, Anna=20, Ola=15} wynik to "Anna"
         return bestKey;
     }
 
@@ -78,6 +84,7 @@ public class AlgorithmsCheatsheet {
         List<String> result = new ArrayList<>();
         result.add(first);
         result.add(second);
+        // Dla punktow Jan=10, Anna=20, Ola=15 wynik to [Anna, Ola]
         return result;
     }
 
@@ -91,11 +98,13 @@ public class AlgorithmsCheatsheet {
             }
         }
 
+        // Dla [2, 7, 4, 9] i threshold = 5 wynik to [7, 9]
         return result;
     }
 
     public static List<String> copyList(List<String> original) {
         // Plytka kopia listy
+        // Dla ["A", "B"] wynik tez wyglada jak ["A", "B"], ale to nowa lista.
         return new ArrayList<>(original);
     }
 
@@ -104,6 +113,7 @@ public class AlgorithmsCheatsheet {
         if (whole == 0) {
             return 0;
         }
+        // Dla 45 i 60 wynik to 75.0
         return (part / (double) whole) * 100;
     }
 
@@ -121,6 +131,7 @@ public class AlgorithmsCheatsheet {
             }
         }
 
+        // Zwraca true, jesli ktos ma ponad polowe wszystkich punktow.
         return false;
     }
 }

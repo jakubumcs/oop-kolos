@@ -10,6 +10,9 @@ public class ClassTemplatesCheatsheet {
     /*
      * SCIAGAWKA: SZYBKIE SZABLONY KLAS OBIEKTOWYCH
      *
+     * Te przyklady pokazuja, jak wygladaja podstawowe klasy w Javie.
+     * To sa gotowe wzory, ktore mozna pozniej przerobic pod swoje zadanie.
+     *
      * Tu masz najczestsze gotowce:
      * - rekord
      * - klasa z polami
@@ -35,6 +38,7 @@ class SimpleBox {
     }
 
     public String getName() {
+        // Dla obiektu new SimpleBox("Kot") wynik to "Kot"
         return name;
     }
 }
@@ -46,9 +50,11 @@ class TeamTemplate {
 
     public void addMember(String name) {
         members.add(name);
+        // Po addMember("Anna") lista members zawiera "Anna"
     }
 
     public List<String> copyMembers() {
+        // Zwraca kopie listy, np. [Anna, Jan]
         return new ArrayList<>(members);
     }
 }
@@ -57,6 +63,7 @@ class TeamTemplate {
 // Metoda statyczna nalezy do klasy, a nie do konkretnego obiektu.
 class ParseTemplate {
     public static int fromText(String text) {
+        // Dla "123" wynik to 123
         return Integer.parseInt(text);
     }
 }
@@ -65,11 +72,11 @@ class ParseTemplate {
 // Przeciazenie to kilka metod o tej samej nazwie, ale innych parametrach.
 class SummaryTemplate {
     public void summarize() {
-        System.out.println("Wersja bez argumentu");
+        System.out.println("Wersja bez argumentu"); // Wersja bez argumentu
     }
 
     public void summarize(List<String> location) {
-        System.out.println("Wersja z argumentem: " + location);
+        System.out.println("Wersja z argumentem: " + location); // np. Wersja z argumentem: [Mazowieckie, Warszawa]
     }
 }
 
@@ -86,6 +93,7 @@ class ProductTemplate {
 
     @Override
     public String toString() {
+        // Dla new ProductTemplate("Mleko", 3) wynik to "Nazwa: Mleko, ilosc: 3"
         return "Nazwa: " + name + ", ilosc: " + amount;
     }
 }
@@ -105,9 +113,10 @@ class VoteTemplate {
 
     public static VoteTemplate createExample() {
         List<String> location = new ArrayList<>();
-        location.add("dolnośląskie");
-        location.add("bolesławiecki");
-        location.add("m. Bolesławiec");
+        location.add("dolnoslaskie");
+        location.add("boleslawiecki");
+        location.add("m. Boleslawiec");
+        // Tworzy przykladowy obiekt z trzema elementami lokalizacji.
         return new VoteTemplate(location);
     }
 }

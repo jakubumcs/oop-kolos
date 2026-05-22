@@ -6,6 +6,8 @@ public class StringCheatsheet {
      * SCIAGAWKA: OPERACJE NA STRINGACH
      *
      * String to tekst.
+     * W Javie String sluzy do przechowywania napisow, czyli slow i zdan.
+     * Te metody pokazuja najczestsze operacje na tekscie.
      *
      * Najczestsze operacje:
      * - split
@@ -33,7 +35,7 @@ public class StringCheatsheet {
         // equals porownuje zawartosc tekstu, a nie to, czy to ten sam obiekt.
         // Do porownywania tekstu uzywaj equals, nie ==
         if (a.equals(b)) {
-            System.out.println("Napisy sa rowne");
+            System.out.println("Napisy sa rowne"); // Napisy sa rowne
         }
     }
 
@@ -42,7 +44,7 @@ public class StringCheatsheet {
         String text = "Andrzej Sebastian DUDA";
 
         if (text.contains("DUDA")) {
-            System.out.println("Tekst zawiera DUDA");
+            System.out.println("Tekst zawiera DUDA"); // Tekst zawiera DUDA
         }
     }
 
@@ -51,7 +53,7 @@ public class StringCheatsheet {
         String text = "   kot   ";
         String cleaned = text.trim();
 
-        System.out.println("[" + cleaned + "]");
+        System.out.println("[" + cleaned + "]"); // [kot]
     }
 
     public static void parseIntExample() {
@@ -59,7 +61,7 @@ public class StringCheatsheet {
         String text = "123";
         int number = Integer.parseInt(text);
 
-        System.out.println(number + 1);
+        System.out.println(number + 1); // 124
     }
 
     public static void toStringBuildingExample() {
@@ -70,7 +72,7 @@ public class StringCheatsheet {
         result += "Linia 2\n";
         result += "Linia 3\n";
 
-        System.out.println(result);
+        System.out.println(result); // Linia 1, potem Linia 2, potem Linia 3
     }
 
     public static void formatExample() {
@@ -79,6 +81,6 @@ public class StringCheatsheet {
         double percentage = 54.3;
 
         String result = "Kandydat: " + name + ", procent: " + percentage;
-        System.out.println(result);
+        System.out.println(result); // Kandydat: Jan Kowalski, procent: 54.3
     }
 }

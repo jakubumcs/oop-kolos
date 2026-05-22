@@ -12,6 +12,9 @@ public class DataStructuresCheatsheet {
     /*
      * SCIAGAWKA: najwazniejsze struktury danych z projektu
      *
+     * Struktury danych to sposob przechowywania informacji w programie.
+     * Dwie najwazniejsze w Javie to lista i mapa.
+     *
      * W tym projekcie najczesciej uzywalismy:
      * 1. List / ArrayList
      * 2. Map / HashMap
@@ -45,17 +48,17 @@ public class DataStructuresCheatsheet {
         names.add("Ola");
 
         // Wyswietlenie calej listy
-        System.out.println(names);
+        System.out.println(names); // [Anna, Jan, Ola]
 
         // Pobranie elementu po indeksie
         // Indeksy zaczynaja sie od 0
-        System.out.println("Pierwszy element: " + names.get(0));
+        System.out.println("Pierwszy element: " + names.get(0)); // Pierwszy element: Anna
 
         // Rozmiar listy
-        System.out.println("Liczba elementow: " + names.size());
+        System.out.println("Liczba elementow: " + names.size()); // Liczba elementow: 3
 
         // Sprawdzenie, czy lista jest pusta
-        System.out.println("Czy lista jest pusta: " + names.isEmpty());
+        System.out.println("Czy lista jest pusta: " + names.isEmpty()); // Czy lista jest pusta: false
     }
 
     public static void listLoop() {
@@ -67,13 +70,13 @@ public class DataStructuresCheatsheet {
         // Petla for-each sluzy do przejscia po wszystkich elementach kolekcji.
         // Najwygodniejsza petla do przejscia po wszystkich elementach
         for (String name : names) {
-            System.out.println(name);
+            System.out.println(name); // Anna, potem Jan, potem Ola
         }
 
         // Petla z indeksem jest przydatna, gdy liczy sie polozenie elementu.
         // Petla z indeksem, gdy indeks tez ma znaczenie
         for (int i = 0; i < names.size(); i++) {
-            System.out.println("Indeks " + i + ": " + names.get(i));
+            System.out.println("Indeks " + i + ": " + names.get(i)); // Indeks 0: Anna itd.
         }
     }
 
@@ -86,8 +89,8 @@ public class DataStructuresCheatsheet {
         // Nowa lista, ale te same elementy
         List<String> copy = new ArrayList<>(original);
 
-        System.out.println("Oryginal: " + original);
-        System.out.println("Kopia: " + copy);
+        System.out.println("Oryginal: " + original); // Oryginal: [A, B]
+        System.out.println("Kopia: " + copy); // Kopia: [A, B]
     }
 
     public static void listOfObjects() {
@@ -98,7 +101,7 @@ public class DataStructuresCheatsheet {
 
         // Przejscie po obiektach na liscie
         for (Candidate candidate : candidates) {
-            System.out.println(candidate.name());
+            System.out.println(candidate.name()); // Jan Kowalski, potem Anna Nowak
         }
     }
 
@@ -113,17 +116,17 @@ public class DataStructuresCheatsheet {
         points.put("Ola", 15);
 
         // Pobranie wartosci po kluczu
-        System.out.println("Punkty Anny: " + points.get("Anna"));
+        System.out.println("Punkty Anny: " + points.get("Anna")); // Punkty Anny: 20
 
         // Bezpieczne pobranie wartosci:
         // jesli klucza nie ma, zwraca wartosc domyslna
-        System.out.println("Punkty Tomka: " + points.getOrDefault("Tomek", 0));
+        System.out.println("Punkty Tomka: " + points.getOrDefault("Tomek", 0)); // Punkty Tomka: 0
 
         // Rozmiar mapy
-        System.out.println("Liczba wpisow: " + points.size());
+        System.out.println("Liczba wpisow: " + points.size()); // Liczba wpisow: 3
 
         // Sprawdzenie czy mapa zawiera klucz
-        System.out.println("Czy jest Anna: " + points.containsKey("Anna"));
+        System.out.println("Czy jest Anna: " + points.containsKey("Anna")); // Czy jest Anna: true
     }
 
     public static void mapLoopByKeys() {
@@ -135,7 +138,7 @@ public class DataStructuresCheatsheet {
         // keySet() daje zbior kluczy, po ktorych mozna iterowac.
         // keySet() zwraca wszystkie klucze
         for (String name : points.keySet()) {
-            System.out.println(name + " -> " + points.get(name));
+            System.out.println(name + " -> " + points.get(name)); // np. Jan -> 10
         }
     }
 
@@ -152,7 +155,7 @@ public class DataStructuresCheatsheet {
             sum += value;
         }
 
-        System.out.println("Suma punktow: " + sum);
+        System.out.println("Suma punktow: " + sum); // Suma punktow: 45
     }
 
     public static void mapLoopByEntries() {
@@ -164,7 +167,7 @@ public class DataStructuresCheatsheet {
         // entrySet() jest wygodne, bo masz od razu klucz i wartosc w jednym miejscu.
         // entrySet() daje od razu klucz i wartosc razem
         for (Map.Entry<String, Integer> entry : points.entrySet()) {
-            System.out.println(entry.getKey() + " ma " + entry.getValue());
+            System.out.println(entry.getKey() + " ma " + entry.getValue()); // np. Anna ma 20
         }
     }
 
@@ -177,8 +180,8 @@ public class DataStructuresCheatsheet {
         votesForCandidate.put(c1, 120);
         votesForCandidate.put(c2, 200);
 
-        System.out.println("Glosy Jana: " + votesForCandidate.get(c1));
-        System.out.println("Glosy Anny: " + votesForCandidate.get(c2));
+        System.out.println("Glosy Jana: " + votesForCandidate.get(c1)); // Glosy Jana: 120
+        System.out.println("Glosy Anny: " + votesForCandidate.get(c2)); // Glosy Anny: 200
     }
 
     public static void sumValuesFromMap() {
@@ -195,7 +198,7 @@ public class DataStructuresCheatsheet {
             sum += votes;
         }
 
-        System.out.println("Suma wszystkich glosow: " + sum);
+        System.out.println("Suma wszystkich glosow: " + sum); // Suma wszystkich glosow: 320
     }
 
     public static void findBiggestValue() {
@@ -216,7 +219,7 @@ public class DataStructuresCheatsheet {
             }
         }
 
-        System.out.println("Najwieksza wartosc ma: " + bestName);
+        System.out.println("Najwieksza wartosc ma: " + bestName); // Najwieksza wartosc ma: Anna
     }
 
     public static void typicalProjectPatterns() {

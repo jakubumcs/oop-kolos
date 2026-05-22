@@ -13,6 +13,9 @@ public class CsvCheatsheet {
      * - kazdy wiersz to jedna linia pliku
      * - dane w jednej linii sa rozdzielone przecinkami
      *
+     * To jest bardzo czesty format danych.
+     * Najpierw wczytujesz tekst, a potem dzielisz go na kolumny.
+     *
      * Przyklad linii:
      * m. Boleslawiec,boleslawiecki,dolnoslaskie,450,1131,6465
      *
@@ -60,8 +63,8 @@ public class CsvCheatsheet {
                 // split(",") rozdziela jedna linie na osobne kolumny
                 String[] values = line.split(",");
 
-                System.out.println("Cala linia: " + line);
-                System.out.println("Liczba kolumn: " + values.length);
+                System.out.println("Cala linia: " + line); // np. Cala linia: m. Boleslawiec,boleslawiecki,dolnoslaskie,450,1131,6465
+                System.out.println("Liczba kolumn: " + values.length); // np. Liczba kolumn: 6
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -83,7 +86,7 @@ public class CsvCheatsheet {
 
             while ((line = br.readLine()) != null) {
                 String[] values = line.split(",");
-                System.out.println("Pierwsza kolumna: " + values[0]);
+                System.out.println("Pierwsza kolumna: " + values[0]); // np. Pierwsza kolumna: m. Boleslawiec
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -111,9 +114,9 @@ public class CsvCheatsheet {
                 String powiat = values[1];
                 String wojewodztwo = values[2];
 
-                System.out.println("Wojewodztwo: " + wojewodztwo);
-                System.out.println("Powiat: " + powiat);
-                System.out.println("Gmina: " + gmina);
+                System.out.println("Wojewodztwo: " + wojewodztwo); // np. Wojewodztwo: dolnoslaskie
+                System.out.println("Powiat: " + powiat); // np. Powiat: boleslawiecki
+                System.out.println("Gmina: " + gmina); // np. Gmina: m. Boleslawiec
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -137,8 +140,8 @@ public class CsvCheatsheet {
                 int firstCandidateVotes = Integer.parseInt(values[3]);
                 int secondCandidateVotes = Integer.parseInt(values[4]);
 
-                System.out.println("Glosy kandydata 1: " + firstCandidateVotes);
-                System.out.println("Glosy kandydata 2: " + secondCandidateVotes);
+                System.out.println("Glosy kandydata 1: " + firstCandidateVotes); // np. Glosy kandydata 1: 450
+                System.out.println("Glosy kandydata 2: " + secondCandidateVotes); // np. Glosy kandydata 2: 1131
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -166,7 +169,7 @@ public class CsvCheatsheet {
                     sum += Integer.parseInt(values[i]);
                 }
 
-                System.out.println("Suma glosow w wierszu: " + sum);
+                System.out.println("Suma glosow w wierszu: " + sum); // np. Suma glosow w wierszu: 8046
             }
         } catch (IOException e) {
             e.printStackTrace();

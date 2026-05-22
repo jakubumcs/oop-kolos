@@ -8,6 +8,9 @@ public class OopCheatsheet {
      * - interfejs
      * - dziedziczenie
      *
+     * OOP to programowanie obiektowe.
+     * Chodzi o to, zeby laczyc dane i zachowania w obiekty.
+     *
      * To nie jest kod do uruchamiania w projekcie.
      * To sa krotkie wzory i przyklady do przypomnienia na egzamin.
      */
@@ -15,16 +18,16 @@ public class OopCheatsheet {
     public static void main(String[] args) {
         // Przyklad dziedziczenia i polimorfizmu
         Animal dog = new Dog();
-        dog.makeSound();
+        dog.makeSound(); // Hau hau
 
         // Przyklad interfejsu
         Printable document = new Report();
-        document.print();
+        document.print(); // Drukuje raport
 
         // Przyklad klasy abstrakcyjnej
         Shape shape = new Circle();
-        System.out.println(shape.description());
-        System.out.println(shape.area());
+        System.out.println(shape.description()); // To jest jakis ksztalt
+        System.out.println(shape.area()); // 12.566370614359172
     }
 }
 
@@ -46,14 +49,14 @@ public class OopCheatsheet {
  */
 class Animal {
     public void makeSound() {
-        System.out.println("Jakis dzwiek");
+        System.out.println("Jakis dzwiek"); // Jakis dzwiek
     }
 }
 
 class Dog extends Animal {
     @Override
     public void makeSound() {
-        System.out.println("Hau hau");
+        System.out.println("Hau hau"); // Hau hau
     }
 }
 
@@ -90,7 +93,7 @@ interface Printable {
 class Report implements Printable {
     @Override
     public void print() {
-        System.out.println("Drukuje raport");
+        System.out.println("Drukuje raport"); // Drukuje raport
     }
 }
 

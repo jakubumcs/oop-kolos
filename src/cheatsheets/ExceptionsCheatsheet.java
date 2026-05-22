@@ -11,6 +11,7 @@ public class ExceptionsCheatsheet {
      *
      * Wyjatek to sytuacja bledna lub szczegolna,
      * np. brak pliku, dzielenie przez zero, brak zwyciezcy.
+     * Gdy program trafia na wyjatek, normalny tok wykonania zostaje przerwany.
      *
      * Najwazniejsze slowa:
      * - try
@@ -30,6 +31,7 @@ public class ExceptionsCheatsheet {
             br.close();
         } catch (IOException e) {
             // Tu trafiasz, jesli np. plik nie istnieje
+            // Wtedy zobaczysz informacje o bledzie na konsoli.
             e.printStackTrace();
         }
     }
@@ -39,7 +41,7 @@ public class ExceptionsCheatsheet {
         // Najwygodniejszy wzor do pracy z plikami
         try (BufferedReader br = new BufferedReader(new FileReader("plik.txt"))) {
             String line = br.readLine();
-            System.out.println(line);
+            System.out.println(line); // np. pierwsza linia pliku
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -50,12 +52,14 @@ public class ExceptionsCheatsheet {
         if (x < 0) {
             throw new IllegalArgumentException("x nie moze byc ujemne");
         }
+        // Dla x = -1 metoda przerwie dzialanie i rzuci blad.
     }
 
     public static int divide(int a, int b) {
         if (b == 0) {
             throw new IllegalArgumentException("Nie wolno dzielic przez zero");
         }
+        // Dla divide(10, 2) wynik to 5
         return a / b;
     }
 
@@ -103,7 +107,7 @@ class CustomExceptionExample {
         try {
             methodThatMayFail(false);
         } catch (MyCustomException e) {
-            System.out.println("Obsluzono wlasny wyjatek");
+            System.out.println("Obsluzono wlasny wyjatek"); // Obsluzono wlasny wyjatek
         }
     }
 }
